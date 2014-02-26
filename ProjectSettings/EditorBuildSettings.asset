@@ -26,8 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Sample Assets/Characters and Vehicles/Car/Scenes/Car.unity
   - enabled: 1
-    path: Assets/Sample Assets/Characters and Vehicles/First Person Character/Scenes/First
-      Person Character.unity
+    path: Assets/Scenes/First Person Character.unity
   - enabled: 1
     path: Assets/Sample Assets/Characters and Vehicles/Rolling Ball/Scenes/Rolling
       Ball.unity
