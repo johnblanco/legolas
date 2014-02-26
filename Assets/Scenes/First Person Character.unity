@@ -651,7 +651,7 @@ Transform:
   m_GameObject: {fileID: 255524444}
   m_LocalRotation: {x: -.0922959819, y: .701057434, z: .701057315, w: .0922959968}
   m_LocalPosition: {x: -18.5428104, y: 1.61909008, z: 5.18571758}
-  m_LocalScale: {x: .5, y: .5, z: .506226659}
+  m_LocalScale: {x: .49999997, y: .5, z: .506226659}
   m_Children: []
   m_Father: {fileID: 248475830}
 --- !u!23 &255524446
@@ -1039,7 +1039,7 @@ Transform:
   m_GameObject: {fileID: 341355594}
   m_LocalRotation: {x: -.270597935, y: .653281629, z: .653281391, w: .270598024}
   m_LocalPosition: {x: -17.387455, y: 1.61909008, z: 2.55085039}
-  m_LocalScale: {x: .49999994, y: .49999994, z: .506226659}
+  m_LocalScale: {x: .499999911, y: .49999994, z: .506226659}
   m_Children: []
   m_Father: {fileID: 248475830}
 --- !u!23 &341355596
@@ -1569,7 +1569,7 @@ Transform:
   m_GameObject: {fileID: 584473101}
   m_LocalRotation: {x: -.353553385, y: .612372458, z: .612372458, w: .353553355}
   m_LocalPosition: {x: -16.3406353, y: 1.61909008, z: 1.5461731}
-  m_LocalScale: {x: .49999997, y: .5, z: .506226659}
+  m_LocalScale: {x: .5, y: .5, z: .506226659}
   m_Children: []
   m_Father: {fileID: 248475830}
 --- !u!23 &584473103
@@ -2830,6 +2830,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 14fd7f343beea674ab4c10d9fa067e51, type: 3}
       propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 14fd7f343beea674ab4c10d9fa067e51, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -4247,7 +4251,7 @@ Transform:
   m_GameObject: {fileID: 1854923397}
   m_LocalRotation: {x: -.183012709, y: .683012724, z: .683012664, w: .183012724}
   m_LocalPosition: {x: -18.1385765, y: 1.61909008, z: 3.79223132}
-  m_LocalScale: {x: .49999997, y: .5, z: .506226659}
+  m_LocalScale: {x: .5, y: .5, z: .506226659}
   m_Children: []
   m_Father: {fileID: 248475830}
 --- !u!23 &1854923399
@@ -4645,15 +4649,15 @@ MonoBehaviour:
   fsm:
     usedInTemplate: {fileID: 0}
     name: FSM
-    startState: initial wait
+    startState: setup
     states:
-    - name: initial wait
+    - name: start wave
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 63
-        y: 105
+        x: 255
+        y: 169
         width: 100
         height: 32
       isBreakpoint: 0
@@ -4670,17 +4674,13 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.Wait
-        - HutongGames.PlayMaker.Actions.SetIntValue
         - HutongGames.PlayMaker.Actions.SetIntValue
         customNames:
         - 
-        - 
-        - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000300000006000000
-        actionHashCodes: 3708ec1a9ffa9c669ffa9c66
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 9ffa9c66
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -4693,31 +4693,25 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams: []
-        byteData: 000040400046494e4953484544000000000001616d6f756e7400000000000000000000017761766573000000000000
+        byteData: 0000000001616d6f756e74000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0f0000001700000001000000100000001000000001000000100000001000000001000000
+        paramDataType: 100000001000000001000000
         paramName:
-        - time
-        - finishEvent
-        - realTime
         - intVariable
         - intValue
         - everyFrame
-        - intVariable
-        - intValue
-        - everyFrame
-        paramDataPos: 00000000050000000d0000000e000000190000001e0000001f000000290000002e000000
-        paramByteDataSize: 0500000008000000010000000b00000005000000010000000a0000000500000001000000
+        paramDataPos: 000000000b00000010000000
+        paramByteDataSize: 0b0000000500000001000000
     - name: spawn
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 63
-        y: 230
+        x: 257
+        y: 260
         width: 142
         height: 48
       isBreakpoint: 0
@@ -4783,7 +4777,7 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams: []
-        byteData: 0000000000000000000000000100000000000000000000000001000000000000000000000001616d6f756e740100000000000000000001616d6f756e740200000000737061776e7320636f6d706c6574656400
+        byteData: 0000000000000000000000000100000000000000000000000001000000000000000000000001616d6f756e740100000000000000000001616d6f756e740300000000737061776e7320636f6d706c6574656400
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
@@ -4813,8 +4807,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 287
-        y: 230
+        x: 479
+        y: 294
         width: 100
         height: 32
       isBreakpoint: 0
@@ -4867,19 +4861,19 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 68
-        y: 400
-        width: 135
+        x: 262
+        y: 390
+        width: 129
         height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
+          name: new wave needed
+          isSystemEvent: 0
           isGlobal: 0
-        toState: initial wait
+        toState: wait
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -4894,16 +4888,14 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.IntAdd
-        - HutongGames.PlayMaker.Actions.Wait
         - HutongGames.PlayMaker.Actions.IntCompare
         customNames:
         - 
         - 
-        - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000300000006000000
-        actionHashCodes: 9ffa9c663708ec1a71d53d18
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 9ffa9c6671d53d18
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -4916,34 +4908,31 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams: []
-        byteData: 000000000177617665730100000000000000a0400046494e495348454400000000000177617665730300000000776176657320636f6d706c6574656400
+        byteData: 00000000017761766573010000000000000000000177617665730300000000776176657320636f6d706c657465646e65772077617665206e656564656400
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1000000010000000010000000f0000001700000001000000100000001000000017000000170000001700000001000000
+        paramDataType: 100000001000000001000000100000001000000017000000170000001700000001000000
         paramName:
         - intVariable
         - add
         - everyFrame
-        - time
-        - finishEvent
-        - realTime
         - integer1
         - integer2
         - equal
         - lessThan
         - greaterThan
         - everyFrame
-        paramDataPos: 000000000a0000000f00000010000000150000001d0000001e000000280000002d0000003c0000003c0000003c000000
-        paramByteDataSize: 0a00000005000000010000000500000008000000010000000a000000050000000f000000000000000000000001000000
+        paramDataPos: 000000000a0000000f000000100000001a0000001f0000002e0000003d0000003d000000
+        paramByteDataSize: 0a00000005000000010000000a000000050000000f0000000f0000000000000001000000
     - name: idle
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 338
-        y: 394
+        x: 530
+        y: 458
         width: 100
         height: 16
       isBreakpoint: 0
@@ -4978,9 +4967,125 @@ MonoBehaviour:
         paramName: []
         paramDataPos: 
         paramByteDataSize: 
+    - name: setup
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 249
+        y: 103.976562
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: start wave
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Wait
+        - HutongGames.PlayMaker.Actions.SetIntValue
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 3708ec1a9ffa9c66
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        byteData: 0000803f0046494e49534845440000000000017761766573000000000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000001700000001000000100000001000000001000000
+        paramName:
+        - time
+        - finishEvent
+        - realTime
+        - intVariable
+        - intValue
+        - everyFrame
+        paramDataPos: 00000000050000000d0000000e000000180000001d000000
+        paramByteDataSize: 0500000008000000010000000a0000000500000001000000
+    - name: wait
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 63
+        y: 415
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: start wave
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 3708ec1a
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        byteData: 0000a0400046494e495348454400
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000001700000001000000
+        paramName:
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 00000000050000000d000000
+        paramByteDataSize: 050000000800000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
+      isGlobal: 0
+    - name: new wave needed
+      isSystemEvent: 0
       isGlobal: 0
     - name: spawns completed
       isSystemEvent: 0
@@ -5034,7 +5139,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2117730468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 13.6742468}
+  m_LocalPosition: {x: 0, y: 20, z: 13.6742468}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
