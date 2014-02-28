@@ -412,6 +412,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1269730357}
   m_GameObject: {fileID: 110173048}
   m_Mesh: {fileID: 4300010, guid: 14fd7f343beea674ab4c10d9fa067e51, type: 3}
+--- !u!1 &140604328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 140604329}
+  m_Layer: 0
+  m_Name: Checkpoint 5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &140604329
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 140604328}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.5329704, y: 1.07593191, z: 8.33474159}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1710788136}
 --- !u!1 &141625743
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,6 +483,32 @@ MonoBehaviour:
   content:
   - {fileID: 615074046}
   childrenOfThisObject: 0
+--- !u!1 &143067684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 143067685}
+  m_Layer: 0
+  m_Name: Checkpoint 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &143067685
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 143067684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.5329704, y: 1.07593191, z: 5.126019}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1710788136}
 --- !u!1 &152927475
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +609,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 234
         y: 118
-        width: 118
+        width: 125
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -882,7 +934,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 232
         y: 105
-        width: 101
+        width: 111
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -936,7 +988,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 240
         y: 160
-        width: 104
+        width: 111
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -1034,7 +1086,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 240
         y: 208
-        width: 120
+        width: 128
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -3259,12 +3311,14 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetGameObject
+        - HutongGames.PlayMaker.Actions.SetIntValue
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 49d19419
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 49d194199ffa9c66
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -3289,18 +3343,21 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams: []
-        byteData: 00
+        byteData: 000000000001636865636b706f696e7420696e646578000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 130000001300000001000000
+        paramDataType: 130000001300000001000000100000001000000001000000
         paramName:
         - variable
         - gameObject
         - everyFrame
-        paramDataPos: 000000000100000000000000
-        paramByteDataSize: 000000000000000001000000
+        - intVariable
+        - intValue
+        - everyFrame
+        paramDataPos: 00000000010000000000000001000000160000001b000000
+        paramByteDataSize: 000000000000000001000000150000000500000001000000
     - name: move to checkpoint
       description: 
       colorIndex: 0
@@ -3413,7 +3470,7 @@ MonoBehaviour:
         x: 362.867188
         y: 118.796875
         width: 161
-        height: 176
+        height: 112
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -3463,38 +3520,6 @@ MonoBehaviour:
           isSystemEvent: 0
           isGlobal: 0
         toState: change target 6
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: checkpoint 6 reached
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: change target 7
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: checkpoint 7 reached
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: change target 8
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: checkpoint 8 reached
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: change target 9
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: checkpoint 9 reached
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: change target 10
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -3804,205 +3829,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 167.125
-        y: 522.023438
+        x: 170.703125
+        y: 538.5
         width: 124
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: move to checkpoint
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
-    - name: change target 7
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 167.125
-        y: 570.023438
-        width: 124
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: move to checkpoint
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
-    - name: change target 8
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 167.125
-        y: 618.023438
-        width: 124
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: move to checkpoint
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
-    - name: change target 9
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 167.125
-        y: 666.023438
-        width: 124
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: move to checkpoint
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
-    - name: change target 10
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 160
-        y: 720
-        width: 133
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -4064,18 +3893,6 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: checkpoint 5 reached
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: checkpoint 6 reached
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: checkpoint 7 reached
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: checkpoint 8 reached
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: checkpoint 9 reached
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions: []
@@ -4175,6 +3992,58 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1269730357}
   m_GameObject: {fileID: 921669162}
   m_Mesh: {fileID: 4300042, guid: 14fd7f343beea674ab4c10d9fa067e51, type: 3}
+--- !u!1 &938528722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 938528723}
+  m_Layer: 0
+  m_Name: Checkpoint 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &938528723
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 938528722}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.6224079, y: 1.07593191, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1710788136}
+--- !u!1 &960023694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 960023695}
+  m_Layer: 0
+  m_Name: Checkpoint 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &960023695
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 960023694}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.20188427, y: 1.07593179, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1710788136}
 --- !u!1 &1095817898
 GameObject:
   m_ObjectHideFlags: 0
@@ -5540,6 +5409,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1648409567}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1655379304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1655379305}
+  m_Layer: 0
+  m_Name: Checkpoint 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1655379305
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1655379304}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.7319069, y: 1.07593191, z: 2.10102987}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1710788136}
 --- !u!1 &1658710478
 GameObject:
   m_ObjectHideFlags: 0
@@ -5807,6 +5702,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 869213968}
+  - {fileID: 960023695}
+  - {fileID: 938528723}
+  - {fileID: 1655379305}
+  - {fileID: 143067685}
+  - {fileID: 140604329}
   m_Father: {fileID: 1381491338}
 --- !u!1 &1734165588
 GameObject:
@@ -6469,7 +6369,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 257
         y: 260
-        width: 136
+        width: 142
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -6620,7 +6520,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 262
         y: 390
-        width: 129
+        width: 140
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -6964,7 +6864,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 208
         y: 160
-        width: 129
+        width: 140
         height: 16
       isBreakpoint: 0
       isSequence: 0
