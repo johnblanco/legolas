@@ -9,8 +9,9 @@ TagManager:
   - 
   - Fire
   - Step
-  - checkpoint 2 collider
-  - checkpoint 5 collider
+  - sector 0 collider
+  - sector 1 collider
+  - sector 2 collider
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
