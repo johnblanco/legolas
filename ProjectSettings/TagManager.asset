@@ -12,6 +12,7 @@ TagManager:
   - sector 0 collider
   - sector 1 collider
   - sector 2 collider
+  - sector 3 collider
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
